@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions — MyCardsandDocs</title>
+  <meta name="description" content="Terms of use for MyCardsandDocs. Plain language, short sections.">
+  <link rel="icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+        MyCards
+      </a>
+      <div class="nav-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+        <a href="https://apps.apple.com/us/app/mycardsanddocs/id6746961420" target="_blank" rel="noopener noreferrer" class="nav-cta">Download</a>
+      </div>
+      <button class="hamburger" onclick="document.querySelector('.nav-overlay').classList.toggle('open')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay">
+    <button class="close" onclick="document.querySelector('.nav-overlay').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+    <a href="/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Home</a>
+    <a href="/privacy" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Privacy</a>
+    <a href="/support" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Support</a>
+    <a href="/terms" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Terms</a>
+    <a href="https://apps.apple.com/us/app/mycardsanddocs/id6746961420" target="_blank" rel="noopener noreferrer" class="nav-cta">Download on the App Store</a>
+  </div>
+
+  <main>
+    <div class="container container-narrow">
+      <div class="page-header">
+        <h1 class="reveal">Terms & Conditions</h1>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>1. Acceptance</h2>
+        <p>By using the app you agree to these terms.</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>2. License</h2>
+        <p>Non-exclusive personal-use license to the app binary.</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>3. Disclaimer</h2>
+        <p>The app is provided as is, without warranty of any kind.</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>4. Limitation of liability</h2>
+        <p>Liability is capped at the app's purchase price (which is zero).</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>5. Your responsibility</h2>
+        <p>You are responsible for remembering your PIN and keeping your .mcd backup passwords. We cannot recover them.</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>6. Changes</h2>
+        <p>Terms may be updated; continued use after publication constitutes acceptance.</p>
+      </div>
+
+      <div class="page-section reveal">
+        <h2>7. Governing law</h2>
+        <p>India.</p>
+      </div>
+
+      <p class="page-date reveal">Governing law: India. Last updated: 13 May 2026.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="margin-top:48px">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;margin:0;padding:24px 0">
+        <p>&copy; 2026 vkfolio.com &middot; Made with care in Bangalore.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  </script>
+</body>
+</html>

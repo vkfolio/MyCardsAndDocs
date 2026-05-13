@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — MyCardsandDocs</title>
+  <meta name="description" content="Get help with MyCardsandDocs. FAQ, contact email, and troubleshooting.">
+  <link rel="icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+        MyCards
+      </a>
+      <div class="nav-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+        <a href="https://apps.apple.com/us/app/mycardsanddocs/id6746961420" target="_blank" rel="noopener noreferrer" class="nav-cta">Download</a>
+      </div>
+      <button class="hamburger" onclick="document.querySelector('.nav-overlay').classList.toggle('open')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay">
+    <button class="close" onclick="document.querySelector('.nav-overlay').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+    <a href="/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Home</a>
+    <a href="/privacy" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Privacy</a>
+    <a href="/support" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Support</a>
+    <a href="/terms" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Terms</a>
+    <a href="https://apps.apple.com/us/app/mycardsanddocs/id6746961420" target="_blank" rel="noopener noreferrer" class="nav-cta">Download on the App Store</a>
+  </div>
+
+  <main>
+    <div class="container container-narrow">
+      <div class="page-header">
+        <h1 class="reveal">Support</h1>
+      </div>
+
+      <!-- Contact card -->
+      <div class="panel reveal">
+        <h2 style="font-size:15px;font-weight:600;color:var(--ink-0);margin-bottom:12px">Get in touch</h2>
+        <p style="font-size:14px;color:var(--ink-1);margin-bottom:4px">Email: <a href="mailto:support@mcd.vkfolio.com" style="color:var(--accent)">support@mcd.vkfolio.com</a></p>
+        <p style="font-size:13px;color:var(--ink-2)">Typical response time: 1-2 business days</p>
+        <p style="font-size:12px;color:var(--ink-3);margin-top:10px">Subject line tip: include your iOS version and the app version (Settings &rarr; bottom of list).</p>
+      </div>
+
+      <!-- FAQ -->
+      <h2 style="font-size:15px;font-weight:600;color:var(--ink-0);margin:28px 0 14px" class="reveal">Frequently asked questions</h2>
+
+      <details class="reveal">
+        <summary>I forgot my PIN. How do I recover my data? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">You can't. The PIN derives the encryption key for your vault. There is no recovery email or master password — that's the point of the offline design. If you've made a .mcd backup, you can restore from that (it has its own password). Otherwise you'll need to reset the app and start over.</div>
+      </details>
+
+      <details class="reveal">
+        <summary>Can I share my vault between two iPhones? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">Yes — Settings &rarr; Export Vault on the first device, AirDrop the .mcd file to the second, Settings &rarr; Import Vault on the second. Both devices keep independent copies after that.</div>
+      </details>
+
+      <details class="reveal">
+        <summary>What is the decoy / hidden items feature? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">A second passcode that reveals items you've moved to the decoy bucket. By default those items are hidden from every list. They auto-hide again the moment the app backgrounds. Useful for items you want to keep separate from casual phone access.</div>
+      </details>
+
+      <details class="reveal">
+        <summary>Why doesn't the card scanner pick up my card? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">Make sure the card fills most of the on-screen frame, the lighting is even (no glare on the embossed digits), and you're holding the phone in portrait with the card landscape. Continuous scanning needs ~1 second of stillness.</div>
+      </details>
+
+      <details class="reveal">
+        <summary>What happens to my data when iOS updates? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">Your vault survives iOS and app updates — CoreData migrates schema changes automatically, your Keychain entries persist. Your data does not migrate to a new device when you restore from iCloud backup; we use device-only Keychain accessibility on purpose. Use Export Vault to move between devices.</div>
+      </details>
+
+      <details class="reveal">
+        <summary>Is this open source? <span class="chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+        <div class="faq-body">Not currently. We may publish parts in future. The cryptography is Apple's standard CryptoKit, not anything custom.</div>
+      </details>
+
+      <!-- Reset panel -->
+      <div class="panel-warn reveal" style="margin-top:28px">
+        <p style="font-size:14px;color:var(--ink-1);line-height:1.6"><strong style="color:var(--ink-0)">Settings &rarr; Erase all vault data</strong> — wipes every card, document and password from the device. Two-step confirmation. There is no recovery once you confirm.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="margin-top:48px">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;margin:0;padding:24px 0">
+        <p>&copy; 2026 vkfolio.com &middot; Made with care in Bangalore.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  </script>
+</body>
+</html>
